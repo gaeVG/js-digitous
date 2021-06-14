@@ -10,5 +10,11 @@ console.log(test)
 */
 
 // 03. Concatenation
+/*
 var myName = "Andy Bouchet"
 console.log("Nice to meet you " + myName)
+*/
+
+// 04. String Length
+var testLength ="I'm very long"
+console.log('La longueur de la variable "testLength" est de ' + testLength.length)
