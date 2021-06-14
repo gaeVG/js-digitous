@@ -22,6 +22,39 @@ console.log('La longueur de la variable "testLength" est de ' + testLength.lengt
 */
 
 // 05. Replace
+/*
 var food ="croissant is meh"
 testify = food.replace("meh", "good")
 console.log("In Paul's bakeries, the " + testify)
+*/
+
+// 06. Up and Down
+
+function format(fmt, ...args) {
+    if (!fmt.match(/^(?:(?:(?:[^{}]|(?:\{\{)|(?:\}\}))+)|(?:\{[0-9]+\}))+$/)) {
+        throw new Error('invalid format string.');
+    }
+    return fmt.replace(/((?:[^{}]|(?:\{\{)|(?:\}\}))+)|(?:\{([0-9]+)\})/g, (m, str, index) => {
+        if (str) {
+            return str.replace(/(?:{{)|(?:}})/g, m => m[0]);
+        } else {
+            if (index >= args.length) {
+                throw new Error('argument index is out of range in format');
+            }
+            return args[index];
+        }
+    });
+}
+function print(fmt, ...args) {
+    console.log(format(fmt, ...args));
+}
+
+var basic ="This is Cool"
+var basicUp =basic.toLowerCase(basic)
+var basicDown =basic.toLowerCase(basic)
+
+print(
+    "Valeur de la variable \"basic\": {0}\n" +
+    "Valeur de la variable \"basicUp\": {1}\n" +
+    "Valeur de la variable \"basicDown\": {2}\n"
+, basic, basicUp, basicDown)
