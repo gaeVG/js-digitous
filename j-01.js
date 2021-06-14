@@ -1,1 +1,2 @@
-console.log("On y va !")
+// 01. Hello World
+console.log("Hello World !");
