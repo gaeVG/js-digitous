@@ -50,7 +50,7 @@ function print(fmt, ...args) {
 }
 
 var basic ="This is Cool"
-var basicUp =basic.toLowerCase(basic)
+var basicUp =basic.toUpperCase(basic)
 var basicDown =basic.toLowerCase(basic)
 
 print(
