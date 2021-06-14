@@ -49,6 +49,7 @@ function print(fmt, ...args) {
     console.log(format(fmt, ...args));
 }
 
+/*
 var basic ="This is Cool"
 var basicUp =basic.toLowerCase(basic)
 var basicDown =basic.toLowerCase(basic)
@@ -58,3 +59,9 @@ print(
     "Valeur de la variable \"basicUp\": {1}\n" +
     "Valeur de la variable \"basicDown\": {2}\n"
 , basic, basicUp, basicDown)
+*/
+
+// 07. Split
+var word ="banana"
+var letters =word.split('')
+console.log(letters)
