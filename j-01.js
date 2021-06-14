@@ -29,7 +29,7 @@ console.log("In Paul's bakeries, the " + testify)
 */
 
 // 06. Up and Down
-
+/*
 function format(fmt, ...args) {
     if (!fmt.match(/^(?:(?:(?:[^{}]|(?:\{\{)|(?:\}\}))+)|(?:\{[0-9]+\}))+$/)) {
         throw new Error('invalid format string.');
@@ -49,7 +49,6 @@ function print(fmt, ...args) {
     console.log(format(fmt, ...args));
 }
 
-/*
 var basic ="This is Cool"
 var basicUp =basic.toLowerCase(basic)
 var basicDown =basic.toLowerCase(basic)
@@ -62,6 +61,13 @@ print(
 */
 
 // 07. Split
+/*
 var word ="banana"
 var letters =word.split('')
 console.log(letters)
+*/
+
+// 08. Template
+var age =31
+var template =`I'm ${age} years old`
+console.log(template)
