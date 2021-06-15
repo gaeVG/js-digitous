@@ -31,6 +31,7 @@ console.log(`text % bis = ${test %bis}`);
 console.log(`text ^ bis = ${test **bis}`);
 */
 // 05. Comparaison
+/*
 let test = 143;
 let bis = 219;
 
@@ -39,3 +40,20 @@ console.log(test < bis);
 console.log(test == bis);
 console.log(test === bis);
 console.log(test != bis);
+*/
+
+// 06. Condition
+let limit = 50
+let score = 64
+
+function showResult(result) {
+
+    if (result >= limit)  {
+        console.log("Ok good !");
+    } else {
+        console.log("Oh nooo...");
+    }
+}
+
+showResult(score)
+showResult(score /2)
