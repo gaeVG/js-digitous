@@ -19,6 +19,7 @@ let rounded =Math.round(num)
 console.log(rounded)
 */
 // 04. Arithmétique
+/*
 let test =12
 let bis =5
 
@@ -28,3 +29,13 @@ console.log(`text x bis = ${test *bis}`);
 console.log(`text / bis = ${test /bis}`);
 console.log(`text % bis = ${test %bis}`);
 console.log(`text ^ bis = ${test **bis}`);
+*/
+// 05. Comparaison
+let test = 143;
+let bis = 219;
+
+console.log(test > bis);
+console.log(test < bis);
+console.log(test == bis);
+console.log(test === bis);
+console.log(test != bis);
