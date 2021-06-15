@@ -66,6 +66,7 @@ let password ="azerty"
 console.log(`The password is ${password.length >= 5 ? "long enough" : "not long enough"}`);
 */
 // 08. Condition III
+/*
 let limit =50
 let score =64
 let password ="azerty"
@@ -80,3 +81,64 @@ console.log(`${ function() {
         console.log("Nothing")
     }
 }} is good`);
+*/
+// * Bonus
+/*
+let nombre =Math.floor(Math.random() * (6 -1)) +1
+
+if (nombre === 6) {
+    console.log("Critical strike!");
+} else {
+    console.log(nombre)
+    console.log("So closed...")
+}
+*/
+// ** Bonus II
+/*
+let currentMonth ="March"
+let months =["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+switch(months.indexOf(currentMonth)) {
+    case 0:
+    case 1:
+    case 11:
+        console.log("Winter");
+        break;
+    case 2:
+    case 3:
+    case 4:
+        console.log("Spring");
+        break;
+    case 5:
+    case 6:
+    case 7:
+        console.log("Summer");
+        break;
+    case 8:
+    case 9:
+    case 10:
+        console.log("Fall");
+        break;
+    default:
+        console.log("Une erreur est survenue");
+}
+*/
+// *** Bonus III
+
+function mathRound(n, roundUp =false) {
+    nSplited =n.toString().split(".")
+
+    if (nSplited.length < 2) {
+        return n
+    } else {
+        if (roundUp) {
+
+        } else {
+            for (let i =nSplited.length; i > )
+        }
+    }
+}
+
+let roundedNumber = 3.6
+console.log(mathRound(roundedNumber))
+
