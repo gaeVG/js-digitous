@@ -43,6 +43,7 @@ console.log(test != bis);
 */
 
 // 06. Condition
+/*
 let limit = 50
 let score = 64
 
@@ -57,3 +58,8 @@ function showResult(result) {
 
 showResult(score)
 showResult(score /2)
+*/
+// 07. Condition II
+let password ="azerty"
+
+console.log(`The password is ${password.length >= 5 ? "long enough" : "not long enough"}`);
