@@ -83,8 +83,8 @@ console.log(`${ function() {
 }} is good`);
 */
 // * Bonus
-/*
-let nombre =Math.floor(Math.random() * (6 -1)) +1
+
+let nombre =Math.floor(Math.random() * (6 -1 +1)) +1
 
 if (nombre === 6) {
     console.log("Critical strike!");
@@ -92,7 +92,7 @@ if (nombre === 6) {
     console.log(nombre)
     console.log("So closed...")
 }
-*/
+
 // ** Bonus II
 /*
 let currentMonth ="March"
@@ -124,7 +124,7 @@ switch(months.indexOf(currentMonth)) {
 }
 */
 // *** Bonus III
-
+/*
 function mathRound(n, roundUp =false) {
     nSplited =n.toString().split(".")
 
@@ -141,4 +141,4 @@ function mathRound(n, roundUp =false) {
 
 let roundedNumber = 3.6
 console.log(mathRound(roundedNumber))
-
+*/
