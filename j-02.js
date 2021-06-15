@@ -60,6 +60,23 @@ showResult(score)
 showResult(score /2)
 */
 // 07. Condition II
+/*
 let password ="azerty"
 
 console.log(`The password is ${password.length >= 5 ? "long enough" : "not long enough"}`);
+*/
+// 08. Condition III
+let limit =50
+let score =64
+let password ="azerty"
+
+console.log(`${ function() {
+
+    if (score >= limit && password.length > 5) {
+        return "Everything"
+    } else if (score >= limit || password.length > 5) {
+        return "Something"
+    } else {
+        console.log("Nothing")
+    }
+}} is good`);
