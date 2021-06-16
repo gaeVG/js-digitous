@@ -5,3 +5,4 @@
 # Excercices
 1) [Jour 1](https://github.com/gaeVG/js-digitous/blob/main/exercices/j-01.js)
 2) [Jour 2](https://github.com/gaeVG/js-digitous/blob/main/exercices/j-02.js)
+3) [Jour 3](https://github.com/gaeVG/js-digitous/blob/main/exercices/j-03.js)
