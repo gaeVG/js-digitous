@@ -1,6 +1,6 @@
 # Les Nombres
-## Les types
-> On a deux types de nombres en Javascript: les Int(egers) et les Floats
+* ## Les types
+> On a deux types de nombres en Javascript: les **Int**(egers) et les **Floats**
 ```js
 let integer = 100
 let float = 8.124
@@ -8,34 +8,61 @@ let float = 8.124
 > * Un *Int* représente tous les entiers relatifs
 > * Un *Float* représente tous les nombres décimaux
 
-## Les opérations
+* ## Les opérations
 > Tous les opérateurs mathématiques sont disponibles pour effectuer tout types d'opération
 ```js
-let addition=1 +9
-let soustraction=10 -5
-let multiplication=2*5
-let division=20/2
-let modulo =20%3
+let addition        =1  +9
+let soustraction    =10 -5
+let multiplication  =2  *5
+let division        =20 /2
+let modulo          =20 %3
 
-console.log()
+console.log(addition, soustraction, multiplication, divison, modulo)
 ```
+> `$ 10, 10, 10, 10, 2`
 
-## Modules
-* ### Random
-```js
-Math.Random(number)
-```
-Génène un nombre aléatoire
-```js
-const students =["Laura", "Amadou", "Victor"]
-let min =0
-let max =students.length
-let myNumber =Math.floor(Math.random() * (max -min +1) +min;
+* ## Méthodes
+  * ### Random
+    ```js
+    Math.Random(number)
+    ```
+    Génène un nombre aléatoire
+    ```js
+    const students =["Laura", "Amadou", "Victor"]
+    let min =0
+    let max =students.length
+    let myNumber =Math.floor(Math.random() * (max -min +1) +min;
 
-console.log(students[myNumber])
-```
+    console.log(students[myNumber])
+    ```
+  * ### Floor
+    ```js
+    Math.Random(number)
+    ```
+    Génène un nombre aléatoire
+    ```js
+    const students =["Laura", "Amadou", "Victor"]
+    let min =0
+    let max =students.length
+    let myNumber =Math.floor(Math.random() * (max -min +1) +min;
+
+    console.log(students[myNumber])
+    ```
+  * ### Ceil
+    ```js
+    Math.Random(number)
+    ```
+    Génène un nombre aléatoire
+    ```js
+    const students =["Laura", "Amadou", "Victor"]
+    let min =0
+    let max =students.length
+    let myNumber =Math.floor(Math.random() * (max -min +1) +min;
+
+    console.log(students[myNumber])
+    ```
 # Les conditions
-* ## if / else / elseif
+* ## if — elseif —  else
 ```js
 if (condition) {
   // Bloc d'instruction
@@ -45,7 +72,9 @@ if (condition) {
   // Bloc d'instruction
 }
 ```
-> Une condition se déclare avec les mots `if`, `elseif`, `else` ; les résultat de la condition à l'intérieur des deux premier doit forcément être égal à `true`
+> Un bloc conditionnel se déclare avec les mots `if`, `elseif`, et `else`
+> 
+> Le résultat des conditions à l'intérieur des deux premiers blocs doit forcément être égal à `true` pour exécuter le code situé à l'intérieur
 ```js
 let monAge =14
 
@@ -57,17 +86,6 @@ if (myNumber < 13) {
   console.log("
 }
 ```
-```js
-let min =0;
-let min, max =0, students.length
-let myNumber =Math.floor(Math.random() * (max -min +1) +min;
-
-if (myNumber === 2) {
- console.log("Le nombre vaut 2 !");
-} else {
-console.log("Le nombre ne vaut pas 2..");
-```
-
 * ## switch
 ```js
 switch (condition) {
@@ -99,11 +117,12 @@ switch (season.toLowerCase()) {
 ```js
 == // Compare la deux valeurs entre elles, sans typage
 === // Compare deux valeurs strictement identiques
-> // Compare deux valeurs le premier strictement supérieur à l'autre
-< // Compare deux valeurs le premier strictement inférieur à l'autre
-=> // Compare deux valeur, le premier supérieur ou égal à l'autre
-=< // Compare deux valeur, le premier inférieur ou égal à l'autre
-!= // Compare deux valeurs différents l'un de l'autre
+> // Compare deux valeurs, la première strictement supérieure à l'autre
+< // Compare deux valeurs, la première strictement inférieure à l'autre
+=> // Compare deux valeur, la première supérieure ou égal à l'autre
+=< // Compare deux valeur, la première inférieure ou égal à l'autre
+!= // Compare deux valeurs différentes l'une de l'autre
+!== // Compare deux valeurs strictement différentes l'une de l'autre
 ```
 ## Les opérateurs ternaires
 ```js
