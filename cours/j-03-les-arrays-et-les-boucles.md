@@ -29,6 +29,16 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         console.log(recipe)
         ```
         > **$**` ['eggs','flour','milk']`
+    * ### reverse
+        ```js
+        Array.reverse()
+        ```
+        > 💬 Retourne un tableau envoyé dans l'ordre inverse
+        ```js
+        let list =["one", "two", "three"]
+        console.log(list.reverse())
+        ```
+        > **$**` ['three','two','one']`
     * ### unshift
         ```js
         Array.unshift(element)
