@@ -1,6 +1,6 @@
 # Les Nombres
 * ## Les types
-> On a deux types de nombres en Javascript: les **Int**(egers) et les **Floats**
+> 💬 On a deux types de nombres en Javascript: les **Int**(egers) et les **Floats**
 ```js
 let integer = 100
 let float = 8.124
@@ -19,14 +19,14 @@ let modulo          =20 %3
 
 console.log(addition, soustraction, multiplication, divison, modulo)
 ```
-> `$ 10, 10, 10, 10, 2`
+> **$** `10, 10, 10, 10, 2`
 
 * ## Méthodes
   * ### Random
     ```js
     Math.Random(number)
     ```
-    Génène un nombre aléatoire
+    > 💬 Génène un nombre aléatoire
     ```js
     const students =["Laura", "Amadou", "Victor"]
     let min =0
@@ -37,30 +37,35 @@ console.log(addition, soustraction, multiplication, divison, modulo)
     ```
   * ### Floor
     ```js
-    Math.Random(number)
+    Math.Floor(number)
     ```
-    Génène un nombre aléatoire
+    > 💬 Arrondi le plus grand entier inférieur ou égal
     ```js
-    const students =["Laura", "Amadou", "Victor"]
-    let min =0
-    let max =students.length
-    let myNumber =Math.floor(Math.random() * (max -min +1) +min;
-
-    console.log(students[myNumber])
+    console.log(Math.floor(5.99));
+    console.log(Math.floor(12.2));
+    console.log(Math.floor(-616.32));
     ```
+    > **$** `5`
+    >
+    > **↪** `12`
+    >
+    > **↪** `-617`
+
   * ### Ceil
     ```js
-    Math.Random(number)
+    Math.Ceil(number)
     ```
-    Génène un nombre aléatoire
+    > 💬 Arrondi le nombre au plus petit entier supérieur ou égal
     ```js
-    const students =["Laura", "Amadou", "Victor"]
-    let min =0
-    let max =students.length
-    let myNumber =Math.floor(Math.random() * (max -min +1) +min;
-
-    console.log(students[myNumber])
+    console.log(Math.Ceil(3.5));
+    console.log(Math.Ceil(42.2));
+    console.log(Math.Ceil(-40.9));
     ```
+    > **$** `4`
+    >
+    > **↪** **`43`**
+    >
+    > **↪** `-40`
 # Les conditions
 * ## if — elseif —  else
 ```js
@@ -72,9 +77,9 @@ if (condition) {
   // Bloc d'instruction
 }
 ```
-> Un bloc conditionnel se déclare avec les mots `if`, `elseif`, et `else`
+> 💬 Un bloc conditionnel se déclare avec les mots `if`, `elseif`, et `else`, suivit de la **condition** entre paranthèses, et du **bloc d'instructions** entre accolades.
 > 
-> Le résultat des conditions à l'intérieur des deux premiers blocs doit forcément être égal à `true` pour exécuter le code situé à l'intérieur
+> **👁‍🗨** Le résultat des conditions à l'intérieur des deux premiers blocs doit forcément être égal à `true` pour exécuter le code situé à l'intérieur
 ```js
 let monAge =14
 
@@ -83,7 +88,7 @@ if (myNumber < 13) {
 } else if (myNumber >= 13 && myNumber < 18) {
   console.log("Bienvenue à toi !");
 } else {
-  console.log("
+  console.log("Il y a eu un problème...");
 }
 ```
 * ## switch
@@ -96,7 +101,7 @@ default:
  // Bloc d'instruction par défault
 }
 ```
-> Les blocs `switch` servent à exécuter du code en fonction de la valeur de quelque chose
+> 💬 Les blocs `switch` servent à exécuter du code en fonction de la valeur de quelque chose
 ```js
 let season ="Summer";
 
@@ -111,20 +116,21 @@ switch (season.toLowerCase()) {
  console.log("Cette saison n'existe pas...")
 }
 ```
+> **$** `C'est l'été !`
 ## Les opérateurs
-### Comparaisons
 ---
+### Opérateurs logiques
 ```js
-== // Compare la deux valeurs entre elles, sans typage
-=== // Compare deux valeurs strictement identiques
-> // Compare deux valeurs, la première strictement supérieure à l'autre
-< // Compare deux valeurs, la première strictement inférieure à l'autre
-=> // Compare deux valeur, la première supérieure ou égal à l'autre
-=< // Compare deux valeur, la première inférieure ou égal à l'autre
-!= // Compare deux valeurs différentes l'une de l'autre
-!== // Compare deux valeurs strictement différentes l'une de l'autre
+==    // Compare la deux valeurs entre elles, sans typage
+===   // Compare deux valeurs strictement identiques
+>     // Compare deux valeurs, la première strictement supérieure à l'autre
+<     // Compare deux valeurs, la première strictement inférieure à l'autre
+=>    // Compare deux valeur, la première supérieure ou égal à l'autre
+=<    // Compare deux valeur, la première inférieure ou égal à l'autre
+!=    // Compare deux valeurs différentes l'une de l'autre
+!==   // Compare deux valeurs strictement différentes l'une de l'autre
 ```
-## Les opérateurs ternaires
+### 👁‍🗨 Les opérations ternaires
 ```js
-let var === true ? return true : return false
+let myVar === true ? return true : return false
 ```

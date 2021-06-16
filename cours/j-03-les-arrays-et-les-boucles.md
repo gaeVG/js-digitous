@@ -56,16 +56,40 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         Array.push(element)
         ```
         > 💬 Ajoute un élément à la fin d'un array
-    * ### shift
+         ```js
+        let recipe =["eggs", "flour"]
+        recipe.push("butter")
+
+        console.log(recipe)
+        ```
+        > **$**` ['eggs','flour','butter']`
+   * ### shift
         ```js
         Array.shift(element)
         ```
         > 💬 Retire la première occurence d'un array
-    * ### pop
+
+        ```js
+        let recipe =["eggs", "flour", "butter"]
+        recipe.shift()
+
+        console.log(recipe)
+        ```
+        
+        > **$** `['flour','butter']`
+   * ### pop
         ```js
         Array.pop(element)
         ```
         > 💬 Retire le dernier élément d'un array
+
+        ```js
+        let recipe =["eggs", "flour", "butter"]
+        recipe.pop()
+
+        console.log(recipe)
+        ```
+        > **$** `['eggs','flour']`
     * ### sort
         ```js
         Array.sort(element => return);
@@ -78,9 +102,11 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         
         console.log(sorted)
         console.log(unsorted)
+        ```
+        > **$** ` ` 
     * ### slice
         ```js
-        Array.sort(element => function() => return);
+        Array.sort(element => (function() => return true));
         ```
         > 💬 La méthode extrait les éléments d'un tableau
         ```js
@@ -93,7 +119,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         ```
         > **$**` [ 13, 36, 54, 64 ]`
         >
-        > **$**` [ 64, 54, 36, 13 ]`
+        > **↪** 51` [ 64, 54, 36, 13 ]`
     * ### join
         ```js
         Array.sort(element => function() => return);
@@ -146,11 +172,11 @@ while (condition) {
     ```
     > **$**` 0`
     >
-    > **$**` 1`
+    > **↪** `1`
     >
-    > **$**` ...`
+    > **↪** ` ...`
     >
-    > **$**` 99`
+    > **↪** ` 99`
   * ## For
     ```js
     for (start, condition, incrementation) {
@@ -170,11 +196,11 @@ while (condition) {
     ```
     > **$**` 0`
     >
-    > **$**` 1`
+    > **↪**` 1`
     >
-    > **$**` ...`
+    > **↪**` ...`
     >
-    > **$**` 99`
+    > **↪**` 99`
   * ## forEach
     ```js
     Array.forEach (function() {
@@ -193,11 +219,11 @@ while (condition) {
     ```
     > **$**` 0`
     >
-    > **$**` 1`
+    > **↪**` 1`
     >
-    > **$**` ...`
+    > **↪**` ...`
     >
-    > **$**` 99`
+    > **↪**` 99`
 
     * ### Le mot clé **break**
         ```js
@@ -206,6 +232,28 @@ while (condition) {
         }
         ```
         > 💬 Ce mot clé, utilisé, entre autre dans une boucle permet de sortir, permet de sortir d'un bloc d'instruction
+
+        ```js
+        for (let i =0; i < 100; i++) {
+            if (i === 50) {
+                break;
+            }
+            
+            console.log(i)
+        }
+        console.log("Boucle terminée");
+        ```
+        > **$** 0
+        >
+        > **↪** 1
+        >
+        > **↪** ...
+        >
+        > **↪** 48
+        >
+        > **↪** 49
+        >
+        > **↪** Boucle terminée
     * ### Le mot clé **continue**
         ```js
         while (true) {
@@ -213,3 +261,28 @@ while (condition) {
         }
         ```
         > 💬 Ce mot clé *stop* l'exécution de la boucle en cours, pour la reprendre à la suite, sans exécuter le reste du bloc actuellement
+
+        ```js
+        for (let i= 0; i < 100; i++) {
+            if (i === 50) {
+                continue;
+            }
+
+            console.log(i)
+        }
+        
+        ```
+        > **$** 0
+        >
+        > **↪** 1
+        >
+        > **↪** ...
+        >
+        > **↪** 49
+        >
+        > **↪** 51
+        >
+        > **↪** ...
+        >
+        > **↪** 99
+        > **↪** Boucle terminée
