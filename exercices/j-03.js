@@ -10,6 +10,7 @@ console.log("\nExercice 02: Accès\n-----------\n");
 let ingredients =["egg", "milk", "butter"];
 console.log(`Afficher : ${ingredients[ingredients.indexOf("milk")]}`);
 console.log(`Index de "butter": ${ingredients.indexOf("butter")}`);
+
 // 03. Add and Remove
 console.log("\nExercice 03: Add and Remove\n-----------\n");
 let objects =["pen", "book", "lamp"];
@@ -27,6 +28,7 @@ console.table(objects);
 objects.shift("chair");
 console.log('Tableau après un shift de "chair":');
 console.table(objects);
+
 // 04. Order
 console.log("\nExercice 04: Order\n-----------\n");
 let numbers =[4, 10, 8, 12, 6]
@@ -35,6 +37,7 @@ console.table(numbers);
 let reverseNumbers =numbers.reverse();
 console.log("Tableau après un reverse();:");
 console.table(reverseNumbers);
+
 // 05. Boucle
 console.log("\nExercice 05: Boucle\n-----------\n");
 let total =0
@@ -47,6 +50,7 @@ for (var index =0; index <= limit; index++); {
 }
 
 console.log(`Valeur actuelle de total (après boucle): ${total}`);
+
 // 06. Reverse
 console.log("\nExercice 06: Reverse\n-----------\n");
 let sentence ="Hello Konexio !";
@@ -80,7 +84,37 @@ while (wIndex <= wLimit) {
     wIndex++
 }
 console.log(`Valeur actuelle de wTotal (après boucle): ${wTotal}`);
+
 // *** Bonus
+console.log("\nExercice Bonus: III\n---------------\n");
 let promotion =["Ange", "Anthony Delforge", "Assad Mohamed", "Elodie Sayavong", "Laura Illouz", "Mridha Emran", "Rahmad Abuzar", "Baydir Aboudou", "Kévin Kemayou", "Poulain Eliott", "Julien Vigner", "Barry amadou Djoulde", "Amar Salah Omar", "Artha"]
 
-console.log(promotion[Math.floor(Math.random() * promotion.length +1)])
+console.log(`Élève sélectionné aléatoirement: ${promotion[Math.floor(Math.random() * promotion.length +1)]}`)
+
+// **** Bonus
+console.log("\nExercice Bonus: IV\n---------------\n");
+let tableau =[]
+let min =0
+let max =100
+let biggest
+
+console.log("Tableau avant la boucle:")
+console.table(tableau)
+
+for (let i =0; i < 20; i++) {
+    let n =Math.floor(Math.random() * (max - min +1)) + min
+
+    if (!biggest) {
+        biggest =n
+    } else if (n > biggest) {
+        biggest =n
+    }
+
+    tableau.push(n)
+}
+
+console.log(`Tableau après la boucle (le nombre le plus grand étant: ${biggest} ):`)
+console.table(tableau)
+
+
+
