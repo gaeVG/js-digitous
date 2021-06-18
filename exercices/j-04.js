@@ -15,6 +15,13 @@ cat2.name ="Kira"
 cat2.age =1
 cat2.isCute =false
 console.table(cat2)
+let cats ={
+    cat,
+    cat2
+}
+
+console.log(cats.cat.age)
+console.log(cats["cat2"]["isCute"])
 
 console.log("\nExerice 03: Even\n-----------\n");
 
@@ -48,11 +55,13 @@ function compare(num1, num2) {
         console.log(" is Bigger")
     }
 }
-
+function rand () {
+    return Math.floor(Math.random() * (42 - 1 +1)) + 1
+}
 
 for (let i =0; i < 10; i++) {  
-    let rand =Math.floor(Math.random() * (42 - 1 +1)) + 1  
-    compare(rand ** i, rand ** (rand %2 == 0 ? i +rand : i -Math.abs(rand)));
+    let r =rand()
+    compare(Math.floor(r ** i), Math.floor(r ** (r %2 == 0 ? i +r : i -Math.abs(r))));
 }
 
 // Exercice 05. Add up
@@ -79,5 +88,5 @@ function format(num) {
 }
 
 let seconds =7000
-console.log(`3700 secondes est égal à ${format(3700)}`)
+console.log(`${seconds} secondes est égal à ${format(seconds)}`)
 console.log(`Il s'est écoulé ${format(Date.now()/1000)} depuis le 1er Janvier 1970`)
