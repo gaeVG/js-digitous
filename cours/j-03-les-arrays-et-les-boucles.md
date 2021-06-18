@@ -5,17 +5,17 @@ var myArray =[String, Number, Function];
 ```
 > 💬 C'est une liste de valeurs quelconque.
 > 
-> 👁‍🗨 Chaque élément à l'intérieur du tableau possède un **index** et chaque tableau possède des méthodes qui lui sont propre
+> 👁‍🗨 Chaque élément à l'intérieur du tableau possède un **index** et chaque tableau possède des méthodes qui lui sont propre. À comparé aux [Objects](), on préfèrera stocker des valeurs de la même catégorie à l'intérieur d'un *Array*.
 ```js
 var tab =["Sophie", "Julien", "Paul"]
 
 console.log(`Taille de mon tableau: ${tab.length}`)
 console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
 ```
-> **$** `Taille de mon tableau: 3`
->
-> **$** `Mon tableau à l'indice 2: Paul`
-
+> ```
+> $ Taille de mon tableau: 3
+> Mon tableau à l'indice 2: Paul
+> ```
 * ## Les méthodes
     * ### indexOf
         ```js
@@ -28,7 +28,9 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
 
         console.log(recipe)
         ```
-        > **$**` ['eggs','flour','milk']`
+        > ```
+        > $ ['eggs','flour','milk']
+        > ```
     * ### reverse
         ```js
         Array.reverse()
@@ -38,7 +40,9 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         let list =["one", "two", "three"]
         console.log(list.reverse())
         ```
-        > **$**` ['three','two','one']`
+        > ```
+        > $ ['three','two','one']
+        > ```
     * ### unshift
         ```js
         Array.unshift(element)
@@ -50,7 +54,9 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
 
         console.log(recipe)
         ```
-        > **$**` ['butter','eggs','flour']`
+        > ```
+        > $ ['butter','eggs','flour']
+        > ```
     * ### push
         ```js
         Array.push(element)
@@ -62,7 +68,9 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
 
         console.log(recipe)
         ```
-        > **$**` ['eggs','flour','butter']`
+        > ```
+        > $ ['eggs','flour','butter']
+        > ```
    * ### shift
         ```js
         Array.shift(element)
@@ -76,7 +84,9 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         console.log(recipe)
         ```
         
-        > **$** `['flour','butter']`
+        > ```
+        > $ ['flour','butter']
+        > ```
    * ### pop
         ```js
         Array.pop(element)
@@ -89,7 +99,9 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
 
         console.log(recipe)
         ```
-        > **$** `['eggs','flour']`
+        > ```
+        > $ ['eggs','flour']
+        > ```
     * ### sort
         ```js
         Array.sort(element => return);
@@ -103,7 +115,9 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         console.log(sorted)
         console.log(unsorted)
         ```
-        > **$** ` ` 
+        > ```
+        > $ 
+        > ``` 
     * ### slice
         ```js
         Array.sort(element => (function() => return true));
@@ -117,9 +131,10 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         console.log(sorted)
         console.log(unsorted)
         ```
-        > **$**` [ 13, 36, 54, 64 ]`
-        >
-        > **↪** 51` [ 64, 54, 36, 13 ]`
+        > ```
+        > $ [ 13, 36, 54, 64 ]
+        > [ 64, 54, 36, 13 ]
+        > ```
     * ### join
         ```js
         Array.sort(element => function() => return);
@@ -129,7 +144,9 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         let tab =["md-3", "d-flex", "col-6"]
         console.log(tab.join(" "))
         ```
-        > **$**` md-3 d-flex col-6`
+        > ```
+        > $ md-3 d-flex col-6
+        > ```
     * ### typeOf
         ```js
        typeOf 
@@ -194,13 +211,14 @@ while (condition) {
         console.log(i)
     }
     ```
-    > **$**` 0`
-    >
-    > **↪**` 1`
-    >
-    > **↪**` ...`
-    >
-    > **↪**` 99`
+    > 🔻 `console` 
+    > ```
+    > $ 0
+    > 1
+    > 2
+    > ...
+    > 99
+    ||
   * ## forEach
     ```js
     Array.forEach (function() {
