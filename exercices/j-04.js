@@ -90,3 +90,27 @@ function format(num) {
 let seconds =7000
 console.log(`${seconds} secondes est égal à ${format(seconds)}`)
 console.log(`Il s'est écoulé ${format(Date.now()/1000)} depuis le 1er Janvier 1970`)
+
+// * Bonus
+console.log("\nExerice Bonus 1:\n-----------\n");
+function generatePasswword(num, method) {
+    
+    if (num < 6 || num > 15) {
+        return "error";
+    }
+
+    let lettres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let password = "";
+    
+    for (let i =1; i <= num; i++) {
+        let index = Math.floor(Math.random() * lettres.length);
+        password += lettres[index];
+    }
+
+    return password;
+}
+
+console.log(generatePasswword(8))
+console.log(generatePasswword(17))
+
+console.log("\nExerice Bonus 2:\n-----------\n");
