@@ -16,27 +16,35 @@ console.log(sortLetters("konexio"));
 console.log("\nExercice 2: XOXO\n-----------");
 
 function countEach(str ="") {
-
+    console.log(str)
     if (str.length === 0 || str.length % 2 != 0) {
         return false
     }
 
     let xCount =0;
     let oCount =0;
+    let capitalTotal =0
 
-    for (let i =0; i <= str.length; i++) {
-        if (str[i] === "x") {
+    for (let i =0; i < str.length; i++) {
+
+        if (str[i].match(/[A-Z]/)) {
+            console.log(str[i])
+            capitalTotal++
+        }
+
+        if (str[i].toLowerCase() == "x") {
             xCount++;
-        } else if (str[i] === "o") {
+        } else if (str[i].toLowerCase() == "o") {
             oCount++;
         }
     }
-
-    return (xCount === oCount) ? true : false
+    console.log(capitalTotal)
+    return [(xCount === oCount) ? true : false, capitalTotal]
 }
 
-console.log(`Résultat pour "xxxoooox": ${countEach("xxxoooox")}`)
-console.log(`Résultat pour "xox": ${countEach("xox")}`)
+console.log(`Résultat pour "xXxoooox": ${countEach("xXxoooox")[0]} pour ${countEach("xXxoooox")[1]} majuscules`)
+console.log(`Résultat pour "xox": ${countEach("xox")[0]} pour ${countEach("xox")[1]} majuscules`)
+console.log(`Résultat pour "hello": ${countEach("hello")} pour ${countEach("hello")[1]} majuscules`)
 
 // 03. Palindrome
 console.log("\nExercice 3: Palindrome\n-----------");
@@ -80,3 +88,28 @@ function swap(str) {
 }
 
 console.log(swap("Hello World"))
+
+// Bonus *
+console.log("\Bonus: 1\n-----------");
+
+function makeItSpongeBob (str ="") {
+
+    if (str.length === 0) {
+        return false
+    }
+
+    let sentence =""
+
+    for (let i =0; i < str.length; i++) {
+
+        if (i % 2 === 0) {
+            sentence +=str[i].toUpperCase()
+        } else {
+            sentence +=str[i].toLowerCase()
+        }
+    }
+
+    return sentence
+}
+
+console.log(makeItSpongeBob("JavasCript is easy"))
