@@ -36,7 +36,7 @@ if (exec === undefined) {
                     {
                         name: "operand1",
                         description: "Choisir le premier numéro",
-                        validator: /^[0-9]*/,
+                        validator: /^[0-9]*$/,
                         warning: "Le numéro d'exercice ne doit comporter qu'un seul numéro"
                     },
                     {
@@ -48,7 +48,7 @@ if (exec === undefined) {
                     {
                         name: "operand2",
                         description: "Choisir le deuxième numéro",
-                        validator: /^[0-9]*/,
+                        validator: /^[0-9]*$/,
                         warning: "Le numéro d'exercice ne doit comporter qu'un seul numéro"
                     }
                 ];
