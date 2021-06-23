@@ -3,11 +3,18 @@ const { calcultate, guess, multiply } = require("./table-utils");
 const { init } = require("./motus.js")
 let args =process.argv.slice(2);
 let exec =args[0];
-var exercises =`
+var exercises =[
+    {
+        name: "number",
+        description: `Choisir un exercice:
 [1 - Calculatrice]
 [2 - Tables de multiplication]
 [4 - Trouver le nombre]
-$ `
+$ `,
+        validator: /^(1|2|4)$/,
+        warning: `Le n° d'exercice ne peut être que 1, 2 ou 4`
+    }
+];
 
 function displayHelp() {
     console.log("Ajouter `-e ou --exercise` en argument pour lancer le programme");
@@ -17,7 +24,7 @@ function displayHelp() {
 
 function displayStatement(statement) {
     let arguments =[];
-
+    
     switch (parseInt(statement)) {
         case 1:
             arguments =[
@@ -25,7 +32,7 @@ function displayStatement(statement) {
                     name: "operand1",
                     description: "Choisir le premier numéro",
                     validator: /^[0-9]*$/,
-                    warning: "Le numéro d'exercice ne doit comporter qu'un seul numéro"
+                    warning: "Le premier opérande ne doit comporter qu'un seul numéro"
                 },
                 {
                     name: "operator",
@@ -37,7 +44,7 @@ function displayStatement(statement) {
                     name: "operand2",
                     description: "Choisir le deuxième numéro",
                     validator: /^[0-9]*$/,
-                    warning: "Le numéro d'exercice ne doit comporter qu'un seul numéro"
+                    warning: "Le second opérande ne doit comporter qu'un seul numéro"
                 }
             ];
 
@@ -58,9 +65,6 @@ function displayStatement(statement) {
             guess()
 
             break;
-        default:
-            console.log("L'exercice n'existe pas...\n");
-            console.log(exercises)
     }
 
     if (arguments.length > 0) {
@@ -81,19 +85,19 @@ function onErr(err) {
     return 1
 }
 
-console.log("Jour 05\n--------")
+console.log("\nJour 05\n--------")
 
 if (exec === undefined) {
     displayHelp()
 } else if (exec.match(/^--(e|E)xercise$/) || exec.match(/-e/)) {
 
     if (!args[1]) {
-        console.log("Choisir un exercice:")
+
         prompt.start()
         prompt.get(exercises, function(err, res) {
 
             if (err) return onErr(err)
-            
+            console.log(res.number)
             displayStatement(res.number)
         })
     } else {
