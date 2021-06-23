@@ -40,20 +40,12 @@ function calcultate(n1, n2, operator) {
 function guess() {
 
     let mysteryNum =Math.floor(Math.random() * (100)) + 1
-    let guessed =false
-    let selected
-
-
-    while (!guessed) {
-        selected= play()
-        guessed =typeof selected === "number" ? selected : false
-    } 
-
     
+    play(mysteryNum)
 }
 
-function play() {
-    let number
+function play(mysteryNum) {
+
     let guessed =[
         {
             name: "number",
@@ -63,22 +55,25 @@ function play() {
         }
     ];
 
-
     prompt.start()
     prompt.get(guessed, function(err, res) {
+        let guess = parseInt(res.number)
 
         if (err) {
             console.log("Une erreur est survenue")
             return null
         }
 
-        return res.number
-    })
+        if (guess === mysteryNum) {
+            console.log("Bravo ! Vous avez trouvé le nombre mystère !")
+        
+        } else {
+            console.log(mysteryNum, guess)
+            if (guess > mysteryNum) console.log("C'est moins !")
+            else console.log("C'est plus !")
 
-    return new Promise(r => {
-        setTimeout(() => {
-            r()
-        }, !number)
+            play(mysteryNum)
+        }
     })
 }
 
