@@ -5,35 +5,62 @@ const wordlist =[
     "muter", "talus", "durit", "franc", "tança", "abîme", "pinté", "parte", "menas", "loché", "hélée", "fumât", "novée", "cires", "korês", "binai", "plomb", "pâmas", "bâtir", "boume", "bleds", "ample", "tolus", "stria", "nimbé", "manié", "iules", "lusse", "laits", "troué", "chope", "envié", "élimé", "seuil", "vîmes", "crane", "suifs", "ciguë", "rials", "talla", "becté", "satîs", "aplat", "cavée", "cafta", "suces", "agaça", "mûres", "adret", "ferlé", "bosse", "dotes", "creux", "états", "fumez", "auget", "codés", "clapa", "dénie", "aèdes", "rayât", "puent", "goums", "total", "matin", "grive", "tisas", "ripas", "samit", "peiné", "jotas", "lives", "muera", "risse", "rivée", "tonné", "twist", "palpé", "gobes", "robin", "parât", "chaos", "verra", "levez", "capez", "pâlie", "brêlé", "biglé", "celer", "sucez", "redut", "nimba", "gaine", "mimes", "ciste", "dotai", "rebab", "puiez", "pinne", "veaux", "pauma", "osque", "ragué", "cerne", "abbés", "fanai", "luron", "râlai", "radis", "tinta", "limai", "pizza", "front", "amour", "ôtées", "pivot", "skifs", "lieur", "yeuse", "gazés", "longé", "hâtés", "virer", "typos", "jalap", "obvia", "sises", "bacul", "juché", "hurlé", "berme", "jouir", "pince", "votez", "nacre", "coati", "fluxé", "parer", "leurs", "poète", "rapin", "tridi", "dénué", "fadez", "poème", "secte", "durai", "clous", "nopez", "féaux"
 ]
 
-var retries = tries
+retries = 0
 
 function clue(scrtWrd, usrWrd) {
-    retries--
-    let result = ""
+    retries--;
+    let result = "";
+
+    console.log(scrtWrd)
 
     if (scrtWrd === usrWrd) {
-        console.log("Bravo !")
+        console.log("Bravo !".rainbow);
+        console.log("Vous avez trouvez le mot à trouver :");
+        console.log(scrtWrd.brightWhite.bgGreen);
+        console.log("");
+
+        var rPlay =[
+            {
+                name: "validate",
+                description: "Voulez-vous rejouer ? [O]ui / [N]on",
+                validator: /^(O|o|N|n)$/,
+                warnings:"[O]ui / [N]on"
+            }
+        ];
+    
+        prompt.start();
+        prompt.get(rPlay, function(err, res) {
+    
+            if (err) return onErr(err)
+            
+            if (res.validate.match(/^(O|o)/)) {
+                retries =tries;
+                init();
+            }
+            clue(scrtWrd, res.word);
+        })
     } else {
         
         for (let iLetter = 0; iLetter < scrtWrd.length; iLetter++) {
-            let letter =usrWrd[iLetter]
+            let letter =usrWrd[iLetter];
 
             if (scrtWrd.indexOf(letter) === -1) {
-                result +=(letter).brightWhite.bgRed
+                result +=((letter).brightWhite);
             } else {
 
                 if (scrtWrd.indexOf(letter, iLetter) === iLetter) {
-                    result +=(letter).brightWhite.bgGreen
+                    result +=(letter).brightWhite.bgRed;
                 } else {
-                    result +=(letter).bgYellow
+
+                    result +=(letter).bgYellow;
                 }
             }
         }
 
-        console.log(scrtWrd.brightWhite.bgGreen, result)
+        console.log(result);
 
         if (retries === 0) {
-            console.log("Dommage !")
+            console.log("Dommage !");
             
             return
         }
@@ -43,9 +70,10 @@ function clue(scrtWrd, usrWrd) {
 }
 
 function init() {
-    let secretWord = wordlist[Math.floor(Math.random() * (wordlist.length -1 -0 +1))]
+    retries =tries;
+    let secretWord = wordlist[Math.floor(Math.random() * (wordlist.length -1 -0 +1))];
 
-    tryWord(secretWord)
+    tryWord(secretWord);
 }
 
 function onErr(err) {
@@ -56,11 +84,12 @@ function onErr(err) {
 
 function tryWord(scrtWrd) {
 
+    console.log(`Vous avez ${retries} essais pour trouver le mot...`)
     var gword =[
         {
             name: "word",
             description: "Choisir un mot de 5 lettres",
-            validator: /^\s*[a-zA-Zéèàêçûîâ]+\s*$/
+            validator: /^\s*[a-zA-Zéèàêçûîâô]+\s*$/
         }
     ];
 
@@ -73,7 +102,7 @@ function tryWord(scrtWrd) {
         
         if (!word) return onErr(`Le mot ${res.word} ne fait pas 5 lettres mais ${res.word.length}`)
         
-        clue(scrtWrd, (res.word).split(""))
+        clue(scrtWrd, res.word)
     })
 }
 
