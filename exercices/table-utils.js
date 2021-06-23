@@ -14,7 +14,6 @@ function calcultate(n1, n2, operator) {
             console.log(`Résultat de l'addition: ${operand1}+${operand2}=${operand1 +operand2}`);
             break;
         case "-":
-
             console.log(`Résultat de la soustraction: ${operand1}-${operand2}=${operand1 -operand2}`);
             break;
         case "x":
@@ -38,14 +37,14 @@ function calcultate(n1, n2, operator) {
 }
 
 function guess() {
-
+    let retries = 0
     let mysteryNum =Math.floor(Math.random() * (100)) + 1
     
-    play(mysteryNum)
+    play(mysteryNum, retries)
 }
 
-function play(mysteryNum) {
-
+function play(mysteryNum, r) {
+    let retries =+r +1
     let guessed =[
         {
             name: "number",
@@ -57,35 +56,36 @@ function play(mysteryNum) {
 
     prompt.start()
     prompt.get(guessed, function(err, res) {
+        retries++
         let guess = parseInt(res.number)
 
         if (err) {
             console.log("Une erreur est survenue")
-            return null
+            return
         }
 
         if (guess === mysteryNum) {
-            console.log("Bravo ! Vous avez trouvé le nombre mystère !")
+            console.log(`
+Vous avez trouvé le nombre mystère en ${retries} coup(s) !`
+            )
         
         } else {
-            console.log(mysteryNum, guess)
             if (guess > mysteryNum) console.log("C'est moins !")
-            else console.log("C'est plus !")
+            else                    console.log("C'est plus !")
 
-            play(mysteryNum)
+            play(mysteryNum, retries)
         }
     })
 }
 
 function multiply(n) {
     
-
     let table = {
         operand :[],
         result: []
     };
 
-    for (let i =0; i <= 10; i++) {        
+    for (let i =0; i <= 10; i++) {
         table.operand.push(parseInt(n))
         table.result.push(n * i);
     }
