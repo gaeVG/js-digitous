@@ -17,7 +17,13 @@ if (exec === undefined) {
     var exercises =[
         {
             name: "number",
-            description: "Choisir le numéro de l'exercice",
+            description: `Choisir le numéro de l'exercice :
+
+[1 - Calculatrice]
+[2 - Tables de multiplication]
+[4 - Trouver le nombre]
+
+$ `,
             validator: /^[0-9]$/,
             warning: "Le numéro d'exercice ne doit comporter qu'un seul chiffre"
         }
