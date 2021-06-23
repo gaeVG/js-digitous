@@ -1,17 +1,15 @@
 const prompt = require("prompt");
 const color = require("colors")
 const tries = 6
-const wordlist =[
+const wordlist = [
     "muter", "talus", "durit", "franc", "tança", "abîme", "pinté", "parte", "menas", "loché", "hélée", "fumât", "novée", "cires", "korês", "binai", "plomb", "pâmas", "bâtir", "boume", "bleds", "ample", "tolus", "stria", "nimbé", "manié", "iules", "lusse", "laits", "troué", "chope", "envié", "élimé", "seuil", "vîmes", "crane", "suifs", "ciguë", "rials", "talla", "becté", "satîs", "aplat", "cavée", "cafta", "suces", "agaça", "mûres", "adret", "ferlé", "bosse", "dotes", "creux", "états", "fumez", "auget", "codés", "clapa", "dénie", "aèdes", "rayât", "puent", "goums", "total", "matin", "grive", "tisas", "ripas", "samit", "peiné", "jotas", "lives", "muera", "risse", "rivée", "tonné", "twist", "palpé", "gobes", "robin", "parât", "chaos", "verra", "levez", "capez", "pâlie", "brêlé", "biglé", "celer", "sucez", "redut", "nimba", "gaine", "mimes", "ciste", "dotai", "rebab", "puiez", "pinne", "veaux", "pauma", "osque", "ragué", "cerne", "abbés", "fanai", "luron", "râlai", "radis", "tinta", "limai", "pizza", "front", "amour", "ôtées", "pivot", "skifs", "lieur", "yeuse", "gazés", "longé", "hâtés", "virer", "typos", "jalap", "obvia", "sises", "bacul", "juché", "hurlé", "berme", "jouir", "pince", "votez", "nacre", "coati", "fluxé", "parer", "leurs", "poète", "rapin", "tridi", "dénué", "fadez", "poème", "secte", "durai", "clous", "nopez", "féaux"
 ]
 
-retries = 0
+var retries = 0
 
 function clue(scrtWrd, usrWrd) {
     retries--;
     let result = "";
-
-    console.log(scrtWrd)
 
     if (scrtWrd === usrWrd) {
         console.log("Bravo !".rainbow);
@@ -35,9 +33,11 @@ function clue(scrtWrd, usrWrd) {
             
             if (res.validate.match(/^(O|o)/)) {
                 retries =tries;
+
                 init();
+            } else {
+                return
             }
-            clue(scrtWrd, res.word);
         })
     } else {
         
@@ -51,7 +51,6 @@ function clue(scrtWrd, usrWrd) {
                 if (scrtWrd.indexOf(letter, iLetter) === iLetter) {
                     result +=(letter).brightWhite.bgRed;
                 } else {
-
                     result +=(letter).bgYellow;
                 }
             }

@@ -24,7 +24,7 @@ function displayHelp() {
 
 function displayStatement(statement) {
     let arguments =[];
-    
+
     switch (parseInt(statement)) {
         case 1:
             arguments =[
@@ -97,7 +97,7 @@ if (exec === undefined) {
         prompt.get(exercises, function(err, res) {
 
             if (err) return onErr(err)
-            console.log(res.number)
+            
             displayStatement(res.number)
         })
     } else {
