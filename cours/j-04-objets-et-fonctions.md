@@ -48,7 +48,7 @@ Object["key"]
 ```
 > 💬 On accède à une clé spécifique soit en renseignant son nom 
 ## Méthodes
-* ### Assign
+* ### `assign()`
     ```js
     Object.asign(object1, object2)
     ```
@@ -73,7 +73,7 @@ Object["key"]
     console.table(admin)
     ```
 
-* ### hasOwnProperty
+* ### `hasOwnProperty()`
     ```js
     Object.hasOwnProperty(key)
     ```
@@ -88,7 +88,7 @@ Object["key"]
     Object.asign(user, admin)
     console.table(admin)
     ```
-* ### Keys
+* ### `keys()`
     ```js
     Object.keys(object)
     ```
@@ -106,13 +106,13 @@ Object["key"]
 
     Object.keys(user)
     ```
-* ### Values
+* ### `values()`
     ```js
     Object.values(object)
     ```
     > 💬 `values()`, un peu comme `keys()`, renvoi les 
 
-* ### Entries
+* ### `entries()`
     ```js
     Object.entries(object)
     ```
@@ -136,6 +136,21 @@ console.log(multiply(2, 4))
 > ```
 > $ 8
 > ```
+* ## `parseInt()`
+    ```js
+    parseInt(String, base)
+    ```
+    > 💬 La fonction **parseInt()** analyse une chaîne de charactère fournie en argument et renvoi un entier exprimé dans une base indiquée
+
+    > 👁‍🗨 Si le paramètre *base* n'est pas indiqué, le retour par défault sera en base 10.
+    ```js
+    var number ="2589"
+    console.log(parseInt(number))
+    ```
+    > ```js
+    > $ 2589
+    > ```
+
 # Le scope
 > 💬 Lorsqu'une variable est déclarée à l'intérieur d'une fonction, celle-ci n'est accessible qu'à l'intérieur du bloc ; ***la fonction a son propre scope***
 >

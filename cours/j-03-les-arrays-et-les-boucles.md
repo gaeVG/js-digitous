@@ -17,7 +17,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
 > Mon tableau à l'indice 2: Paul
 > ```
 * ## Les méthodes
-    * ### indexOf
+    * ### `indexOf()`
         ```js
         Array.indexOf(element)
         ```
@@ -31,7 +31,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > ```
         > $ ['eggs','flour','milk']
         > ```
-    * ### reverse
+    * ### `reverse()`
         ```js
         Array.reverse()
         ```
@@ -43,7 +43,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > ```
         > $ ['three','two','one']
         > ```
-    * ### unshift
+    * ### `unshift()`
         ```js
         Array.unshift(element)
         ```
@@ -57,7 +57,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > ```
         > $ ['butter','eggs','flour']
         > ```
-    * ### push
+    * ### `push()`
         ```js
         Array.push(element)
         ```
@@ -71,7 +71,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > ```
         > $ ['eggs','flour','butter']
         > ```
-   * ### shift
+   * ### `shift()`
         ```js
         Array.shift(element)
         ```
@@ -87,7 +87,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > ```
         > $ ['flour','butter']
         > ```
-   * ### pop
+   * ### `pop()`
         ```js
         Array.pop(element)
         ```
@@ -102,7 +102,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > ```
         > $ ['eggs','flour']
         > ```
-    * ### sort
+    * ### `sort()`
         ```js
         Array.sort(element => return);
         ```
@@ -118,7 +118,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > ```
         > $ 
         > ``` 
-    * ### slice
+    * ### `slice()`
         ```js
         Array.sort(element => (function() => return true));
         ```
@@ -135,7 +135,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > $ [ 13, 36, 54, 64 ]
         > [ 64, 54, 36, 13 ]
         > ```
-    * ### join
+    * ### `join()`
         ```js
         Array.sort(element => function() => return);
         ```
@@ -147,7 +147,7 @@ console.log(`Mon tableau à l'indice 2: ${tab[2]}`)
         > ```
         > $ md-3 d-flex col-6
         > ```
-    * ### typeOf
+    * ### `typeOf()`
         ```js
        typeOf 
         ```
@@ -219,7 +219,7 @@ while (condition) {
     > ...
     > 99
     ||
-  * ## forEach
+  * ## `forEach()`
     ```js
     Array.forEach (function() {
         // Bloc d'instructions

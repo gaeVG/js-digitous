@@ -12,17 +12,19 @@ console.log("Hello World");
 ```js
 var maVariable = value;
 ```
-> 💬 On déclare nos variables à l'aide du mot clé **var**, suivi du *nom de notre variable*, d'un symbole **égal**, puis de sa valeur.
+> 💬 On déclare nos variables à l'aide du mot clé `var`, suivi du *nom de notre variable*, d'un symbole **égal**, puis de sa valeur.
 >
 > 👁‍🗨 Voir la liste des [mots réservés](https://www.w3schools.com/js/js_reserved.asp)
+
 
 ```js
 var hello ="Hello World";
 console.log(hello);
 ```
 > **$** `Hello World`
+
 ## Les types de variables
-* ### Les chaînes de caractères
+* ### Les *chaînes de caractères* (**string**)
 ```js
 var string = "Ma chaîne de caractères";
 ```
@@ -35,22 +37,24 @@ var nom = "Bouchet"
 
 console.log("Je m'appelle " + prenom + " " + nom)
 ```
-> **$** `Je m'appelle Andy Bouchet`
-* ### Les nombres entier
+> ```
+> $ "Je m'appelle Andy Bouchet"
+> ```
+* ### **Les nombres entier**
 ```js
 var monAge = 31;
 ```
 > 💬 Ce sont tous les nombres, sur lesquels ils est possible d'effectuer toutes les opérations mathématiques connues
 > 
 > 👁‍🗨 La valeur de ces variables ne doit être comprise entre **-2 147 483 648** et **2 147 483 647**
-* ### Les booléens
+* ### Les **booléens**
 ```js
 var isTrue =true
 var isFalse =false
 ```
 
 > 💬 Les variables *booléennes* sont les variables les plus simple, qui n'acceptent que deux valeurs, **true** et **false**
-* ### Les objets
+* ### Les **objets**
 > 💬 Les objets sont des variables détaillées
 ```js
 var users ={
@@ -59,7 +63,7 @@ var users ={
  isCool =true
 };
 ```
-* ### Les tableau (array)
+* ### Les *tableaux* (**array**)
 > 💬 Un tableau est un objet spécial, qui ne contient aucune propriété
 ```js
 var tab =[]
@@ -67,7 +71,7 @@ tab = ["Andy, 31, true", {}]
 console.log(tab[1])
 ```
 > **$** `31`
-### Les non-définies
+### Les **non-définies**
 ```js
 var myVarNull = null
 var myVarUndefined = undefined;
@@ -81,18 +85,18 @@ console.log(onCrouch, onProned)
 onCrouch =null
 console.log(onCrouch, onProned)
 ```
-> **$** `undefined, undefined`
-
-> **↪** `true, undefined`
-
-> **↪** `null, undefined`
+> ```js
+> $ "undefined, undefined"
+> "true, undefined"
+> "null, undefined"
+> ```
 # Les fonctions
 ```js
 function myFunc(argument) {
  // Bloc d'instruction
 }
 ```
-> 💬 On **déclare** une fonction à l'aide du mot clé `function`, suivi du nom de la fonction, puis de ses arguments entre parathèses, et le bloc d'instruction entre accolade, lequel nous servira à délarer les instructions souhaités
+> 💬 On **déclare** une fonction à l'aide du mot clé `function`, suivi du nom de la fonction, puis de ses arguments entre parathèses, et du son bloc d'instruction entre accolade, lequel nous servira à déclarer les instructions souhaités
 ```js
 function printMyName(name) {
  console.log(name)
@@ -100,23 +104,29 @@ function printMyName(name) {
 
 printMyName("Andy")
 ```
-> **$** `Andy`
+> ```js
+> $ "Andy"
+> ```
 ## Utilisation des méthodes d'objets
-* ### Replace
+* ### `replace()`
 ```js
 var isHard = "Coding is hard";
 isFun = test.replace("hard", "fun")
 
 console.log(isFun)
 ```
-> **$** `Coding is fun`
-* ### charAt
+> ```js
+> $ "Coding is fun"
+> ```
+* ### `charAt()`
 ```js
 var hello = "Bonjour je m'appelle Andy"
 console.log(hello.charAt(5)
 ```
-> **$** `u`
-* ### toUpperCase / toLowercase
+> ```js
+> $ "u"
+> ```
+* ### `toUpperCase()`, `toLowercase()`
 ```js
 String.toUpperCase()
 ```
@@ -127,34 +137,36 @@ console.log(shy.toUpperCase())
 var spammer ="SALUT JE VEND DES SCRIPTS"
 console.log(spammer.toLowerCase())
 ```
-> **$** `ÉCOUTEZ MOI !`
->
-> **↪** `salut je vend des scripts`
-* ### split
+> ```js
+> $ "ÉCOUTEZ MOI !"
+> "salut je vend des scripts !"
+> ```
+* ### `split()`
 ```js
 String.split(arg)
 ```
 > 💬 Cette méthode découpe une chaine de caractère en tableau ordonné
 ```js
+
 ```
-* ### indexOf
+* ### `indexOf()`
 ```js
 String.indexOf(String)
 ```
-* ### subString
+* ### `subString()`
 ```js
 String.subString(int, int)
 ```
-> **subString** va séparer la chaine en tableau, en fonction du nombre renseigné en argument
+> 💬 `subString()` va séparer la chaine en tableau, en fonction du nombre renseigné en argument
 ```js
 var fakeNew = "J'adore la Bible ! Ça n'a aucun sens, et personne ne s'est posé la question !"
 console.log(fakeNew.substring(0, 18))
 ```
-> * ### trim
+> * ### `trim()`
 ```js
 String.trim()
 ```
-> Le **trim** va retirer les blancs en début et fin de chaine de caractère
+> 💬 Le `trim()` va retirer les blancs en début et fin de chaine de caractère
 ```js
 var message ="            Je suis quelqu'un qui prends beaucoup de place             "
 console.log(message)

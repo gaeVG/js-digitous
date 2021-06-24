@@ -1,15 +1,15 @@
 # Les Nombres
 * ## Les types
-> 💬 On a deux types de nombres en Javascript: les **Int**(egers) et les **Floats**
+> 💬 On a deux types de nombres en Javascript: les `Int`(egers) et les `Floats`
+> 
+> 👁‍🗨 Un *Int* représente tous les entiers relatifs, le *Float* représente tous les nombres décimaux
 ```js
 let integer = 100
 let float = 8.124
 ```
-> * Un *Int* représente tous les entiers relatifs
-> * Un *Float* représente tous les nombres décimaux
 
 * ## Les opérations
-> Tous les opérateurs mathématiques sont disponibles pour effectuer tout types d'opération
+> 💬 Tous les opérateurs mathématiques sont disponibles pour effectuer tout types d'opération
 ```js
 let addition        =1  +9
 let soustraction    =10 -5
@@ -19,10 +19,11 @@ let modulo          =20 %3
 
 console.log(addition, soustraction, multiplication, divison, modulo)
 ```
-> **$** `10, 10, 10, 10, 2`
-
+> ```js
+> $ "10, 10, 10, 10, 2"
+> ```
 * ## Méthodes
-  * ### Random
+  * ### `Random()`
     ```js
     Math.Random(number)
     ```
@@ -35,7 +36,7 @@ console.log(addition, soustraction, multiplication, divison, modulo)
 
     console.log(students[myNumber])
     ```
-  * ### Floor
+  * ### `Floor()`
     ```js
     Math.Floor(number)
     ```
@@ -45,13 +46,11 @@ console.log(addition, soustraction, multiplication, divison, modulo)
     console.log(Math.floor(12.2));
     console.log(Math.floor(-616.32));
     ```
-    > **$** `5`
-    >
-    > **↪** `12`
-    >
-    > **↪** `-617`
-
-  * ### Ceil
+    > ```js
+    > $ "5"
+    > "12"
+    > "-617
+  * ### `Ceil()`
     ```js
     Math.Ceil(number)
     ```
@@ -61,11 +60,10 @@ console.log(addition, soustraction, multiplication, divison, modulo)
     console.log(Math.Ceil(42.2));
     console.log(Math.Ceil(-40.9));
     ```
-    > **$** `4`
-    >
-    > **↪** **`43`**
-    >
-    > **↪** `-40`
+    > ```js
+    > $`4`
+    > "43"
+    > "-40"
 # Les conditions
 * ## if — elseif —  else
 ```js
@@ -116,7 +114,9 @@ switch (season.toLowerCase()) {
  console.log("Cette saison n'existe pas...")
 }
 ```
-> **$** `C'est l'été !`
+> ```js
+> $ "C'est l'été !"
+> ```
 ## Les opérateurs
 ---
 ### Opérateurs logiques
