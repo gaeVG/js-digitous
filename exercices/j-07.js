@@ -1,4 +1,6 @@
 const fs = require("fs");
+const { resolve } = require("path");
+const prompt = require("prompt")
 
 // 01. File System
 console.log("\nExerice 01: File System\n-----------\n");
@@ -120,3 +122,78 @@ setTimeout(() => {
     console.table(sold);
 
 }, 30);
+
+setTimeout(() => {
+    var file ="./wordlist.json";
+    var retries =0;
+    var secretWord ="", userWord ="";
+
+    function onErr(err) {
+        console.error(err)
+    }
+
+    function checkLetter(req) {
+        retries--;
+
+        word.split("").filter(l => {
+            return (l === req) ? m : "_"
+        }).join("");
+
+        if (result != word) {
+
+            if (retries === 0) {
+                onErr("Fin de la partie !")
+            }
+
+            userPrompt(word)
+        }
+    }
+
+    function randomWord() {
+
+        return new Promise(resolve => {
+            setTimeout(() => {
+
+                fs.stat(file, function(err, res) {
+
+                    if (res.isFile()) {
+                        fs.readFile(file, (err, data) => {
+                            let wordlist =JSON.parse(data)
+                            resolve(wordlist[Math.floor( Math.random() * ( (wordlist.length -1) +1 ) )])
+                        })
+                    } 
+                });
+            }, 1000);
+        });
+    }
+
+    async function init() {
+        retries =10
+        secretWord =await randomWord()
+        userWord =word.split("").map(letter => "_").join("")
+
+        userPrompt(secretWord, userWord)
+    }
+
+    function userPrompt(secretWord, userWord) {
+
+        let arg =[
+            {
+                name: "letter",
+                description: "Choisir une lettre",
+                validator: /^[a-zA-Z]{1}$/,
+                warning: "Une seule lettre à la fois !"
+            }
+        ];
+
+        prompt.start();
+        prompt.get(arg, function(err, res) {
+
+            if (err) return onErr(err)
+
+            checkLetter(res.letter, secretWord, userWord)
+        })
+    }
+
+    init()
+}, 250);
