@@ -75,7 +75,7 @@ setTimeout(() => {
     console.table(even);
 
     // 06. Cakes
-    console.log("\nExerice 05: Cakes\n-----------\n");
+    console.log("\nExerice 06: Cakes\n-----------\n");
 
     let cakes =[
         {
@@ -105,11 +105,18 @@ setTimeout(() => {
         },
     ];
 
-    let sold =cakes.map(cake => {
-        cake.filter(choco => (cake.flavor)
-        )
-    })
-
-    console.table(sold)
+    let sold =cakes.filter(cake => {
+        return (cake.flavor == "chocolate")
+    }).map(element => {
+        element.status = "sold out"
+        
+        return element
+    });
     
+
+    console.log("Tableau initial :");
+    console.table(cakes);
+    console.log("Tableau doublé :");
+    console.table(sold);
+
 }, 30);
