@@ -80,7 +80,7 @@ function displayStatement(statement) {
 }
 
 function onErr(err) {
-    console.log(err)
+    console.error(err)
     
     return 1
 }
