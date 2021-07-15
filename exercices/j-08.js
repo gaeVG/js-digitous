@@ -83,6 +83,18 @@ async function catchPokemon() {
     }
 }
 
-
 catchPokemon()
 
+
+// Bonus
+
+let hand
+let bank =Math.floor(Math.random() * (21 - 16 +1)) + 16
+
+function init() {
+
+}
+
+function turn() {
+    
+}
